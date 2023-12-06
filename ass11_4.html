@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Vue Instance</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <form @submit.prevent="submitForm">
+            <input type="text" v-model="username" placeholder="Username">
+            <p v-if="errors.username">{{ errors.username }}</p>
+    
+            <input type="email" v-model="email" placeholder="Email">
+            <p v-if="errors.email">{{ errors.email }}</p>
+    
+            <input type="password" v-model="password" placeholder="Password">
+            <p v-if="errors.password">{{ errors.password }}</p>
+    
+            <button :disabled="hasErrors">Submit</button>
+        </form>
+    </div>
+<script src="ass11_4.js"></script>
+</body>
+</html>
